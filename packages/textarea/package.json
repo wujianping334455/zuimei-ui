@@ -1,0 +1,19 @@
+{
+  "name": "@z-ui/textarea",
+  "version": "1.0.0",
+  "description": "> TODO: description",
+  "author": "风景依稀 <56299310@qq.com>",
+  "homepage": "",
+  "license": "ISC",
+  "main": "lib/textarea.js",
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "test": "echo \"Error: run tests from root\" && exit 1"
+  }
+}

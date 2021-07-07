@@ -1,0 +1,42 @@
+
+textarea::-webkit-input-placeholder {
+  color: #b9bdc6;
+  font-size: 16px;
+}
+
+.z-textarea-wrapper {
+  padding: 12px;
+  display: flex;
+  border: 1px solid #e5e8ed;
+  border-radius: 4px;
+  resize: none;
+  word-break: break-word;
+}
+.z-textarea {
+  height: 100px;
+  color: #25324e;
+  font-size: 16px;
+  outline: none;
+  border-radius: 0;
+  line-height: 25px;
+  appearance: none;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background-color: transparent;
+  overflow: visible;
+  display: block;
+  resize: none;
+  word-break: break-word;
+  word-wrap: break-word;
+}
+
+textarea:disabled {
+    background-color: #ffffff;
+    pointer-events: none;
+    cursor: not-allowed;
+    -webkit-text-fill-color: #737c8e;
+    opacity: 1;
+    color: #737c8e;
+}
+

@@ -1,0 +1,140 @@
+$height: 22px !default;
+$margin: 3px;
+
+.z-radio {
+  display: inline-flex;
+  position: relative;
+  overflow: hidden;
+  vertical-align: middle;
+  user-select: none;
+  font-size: 14px;
+  -webkit-tap-highlight-color: transparent;
+  .z-radio-content {
+    display: inline-flex;
+  }
+  cursor: pointer;
+
+  .z-radio-input {
+    display: none;
+  }
+
+  .z-radio-label {
+    position: absolute;
+    top: 0;
+    font-weight: 600;
+    color: white;
+
+    &.switch-left {
+      left: 10px;
+    }
+
+    &.switch-right {
+      right: 10px;
+    }
+  }
+
+  .z-radio-core {
+    margin: 0;
+    display: inline-block;
+    position: relative;
+    outline: 0;
+    box-sizing: border-box;
+    background: #e3e4e8;
+    transition: border-color 0.3s, background-color 0.3s;
+    user-select: none;
+
+    &:before {
+      display: block;
+      position: absolute;
+      overflow: hidden;
+      top: 0;
+      left: 0;
+      z-index: 20;
+      transform: translate($margin, $margin);
+      transition: transform 0.3s;
+      border-radius: 100%;
+      background-color: #fff;
+      content: '';
+    }
+  }
+
+  &.toggled {
+    .z-radio-core:before {
+      transform: translate(var(--d), $margin);
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+}
+
+.z-radio {
+  line-height: var(--h);
+  min-height: var(--h);
+
+  .z-radio-label {
+    line-height: var(--h);
+    min-height: var(--h);
+  }
+
+  .z-radio-core {
+    border-radius: 999px;
+    width: var(--w);
+    min-height: var(--h);
+
+    &:before {
+      width: 'calc(var(--h) - 6px)';
+      height: 'calc(var(--h) - 6px)';
+    }
+  }
+}
+
+.z-radio {
+  &.toggled {
+    .z-circle-core {
+      border-color: #409eff;
+      border: 1px solid #409eff;
+      &:after {
+        transform: translate(-50%, -50%) scale(1);
+      }
+    }
+  }
+  .z-circle-core {
+    position: absolute;
+    display: inline-block;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    box-sizing: border-box;
+    height: 16px;
+    width: 16px;
+    bottom: 50%;
+    top: 50%;
+    // margin: 6px auto auto;
+    margin: auto;
+    &:after {
+      width: 8px;
+      height: 8px;
+      border-radius: 100%;
+      background-color: #409eff;
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform 0.15s ease-in;
+    }
+  }
+  .z-label {
+    user-select: none;
+    color: #999999;
+    padding: 0 5px 0 5px;
+    font-size: 14px;
+    line-height: inherit;
+  }
+  .z-label-circle {
+    padding: 0 5px 0 21px;
+  }
+}
