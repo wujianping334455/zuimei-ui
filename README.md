@@ -34,12 +34,22 @@ lerna create xxx
 开发中如果软连接引用不到，可执行yarn install
 
 ### 项目结构介绍
---builds // 打包脚本
---lib  // 打包输出目录
---packages // 组件工作目录
+-- builds // 打包脚本
+
+-- lib  // 打包输出目录
+
+-- packages // 组件工作目录
+
     -- theme-chalk  // 样式目录，index.scss中需要引入所有的scss文件，打包成容易的css文件，用户使用是，全局引入的时候用到
+    
     -- z-ui // index.ts，引入导出全部组件，方便用全局引用
+        
         -- lib  // 样式输出目录，单个组件打包输出目录style
+           
             -- fonts // 字体
+            
             -- index.css // 用户可以直接引用的css文件，对应theme-chalk的index.scss
---website // demo目录
+
+-- website // demo目录
+
+    -- components // 目录demo目录，按大驼峰命名XDemo.vue,会自定加入到router里面，不需要修改router文件
